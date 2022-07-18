@@ -1,13 +1,16 @@
 package br.com.bytebank.banco.teste;
 
-import br.com.bytebank.banco.modelo.Cliente;
-import br.com.bytebank.banco.modelo.ContaCorrente;
-
 public class Teste {
     public static void main(String[] args) {
-        ContaCorrente cc = new ContaCorrente(111,1111);
+        int[] idade = new int[5];
 
 
-        System.out.println(cc);
+        for (int i = 0; i < idade.length; i++) {
+            idade[i] = i * i + 20 ;
+        }
+
+        for (int i = 0; i < idade.length; i++) {
+            System.out.println(idade[i]);
+        }
     }
 }
