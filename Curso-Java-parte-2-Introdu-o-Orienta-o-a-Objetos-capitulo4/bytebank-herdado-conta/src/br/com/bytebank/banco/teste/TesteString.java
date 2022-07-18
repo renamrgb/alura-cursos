@@ -9,6 +9,7 @@ public class TesteString {
        //char c =  nome.charAt(2);
 
        // System.out.println(nome);
-        System.out.println(c);
+       // System.out.println(c);
+        System.out.println();
     }
 }
