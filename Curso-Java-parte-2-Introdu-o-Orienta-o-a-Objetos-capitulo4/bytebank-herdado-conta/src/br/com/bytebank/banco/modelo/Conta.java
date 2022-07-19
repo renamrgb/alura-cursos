@@ -92,8 +92,17 @@ public abstract class Conta {
         return total;
     }
 
+
+
     @Override
     public String toString() {
         return "Numero: " + this.numero;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Conta conta = (Conta) obj;
+        return this.agencia == conta.agencia && this.numero == conta.numero ? true : false;
     }
 }
