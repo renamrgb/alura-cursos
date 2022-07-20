@@ -10,7 +10,10 @@ public class TesteLeitura {
 
         String linha = buffer.readLine();
 
-        System.out.println(linha);
+        while (!linha.isEmpty()){
+            System.out.println(linha);
+            linha = buffer.readLine();
+        }
 
         buffer.close();
     }
