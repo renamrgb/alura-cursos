@@ -15,6 +15,9 @@ public class TesteLeitura {
             linha = buffer.readLine();
         }
 
+
+
+
         buffer.close();
     }
 }
