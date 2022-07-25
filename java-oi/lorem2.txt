@@ -1,4 +1,3 @@
-Testando a criação de arquivo
-mesmo assim vamos ver
- 
-testando linhas
+lorem teste nova linha printStream
+
+teste linha
