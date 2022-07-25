@@ -1,7 +1,6 @@
 package br.com.renam.jav.oi;
 
 import java.io.*;
-import java.net.Socket;
 
 public class TesteLeituraGravacao {
     public static void main(String[] args) throws IOException {
