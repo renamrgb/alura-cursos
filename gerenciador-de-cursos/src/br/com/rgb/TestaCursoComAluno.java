@@ -2,6 +2,9 @@ package br.com.rgb;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
     public static void main(String[] args) {
         Curso curso = new Curso("Dominando as coloções", "paulo");
@@ -19,9 +22,23 @@ public class TestaCursoComAluno {
 
         System.out.println("Todos alunos matriculados");
 
-        curso.getAlunos().forEach(a -> {
-            System.out.println(a);
-        });
+        Set<Aluno> alunos = curso.getAlunos();
+        Iterator<Aluno> iterator = alunos.iterator();
+
+        while (iterator.hasNext()){
+            Aluno proximo = iterator.next();
+            System.out.println(proximo);
+        }
+
+//        curso.getAlunos().forEach(a -> {
+//            System.out.println(a);
+//        });
+
+//        for (Aluno a : curso.getAlunos()) {
+//            System.out.println(a);
+//        }
+
+
 
        // System.out.println("o aluno " + a1 + " está matriculado?");
        // System.out.println(curso.estaMatriculado(a1));
@@ -29,10 +46,9 @@ public class TestaCursoComAluno {
 
         Aluno turini =  new Aluno("Rodrigo turini",34672 );
 
-        System.out.println(curso.estaMatriculado(turini));
+        //System.out.println(curso.estaMatriculado(turini));
 
-        System.out.println(a1.equals(turini));
-
+        //System.out.println(a1.equals(turini));
 
 
 
