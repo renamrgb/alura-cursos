@@ -1,5 +1,7 @@
 package br.com.rgb;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class TestaCursoComAluno {
     public static void main(String[] args) {
         Curso curso = new Curso("Dominando as coloções", "paulo");
@@ -21,6 +23,21 @@ public class TestaCursoComAluno {
             System.out.println(a);
         });
 
+       // System.out.println("o aluno " + a1 + " está matriculado?");
+       // System.out.println(curso.estaMatriculado(a1));
+
+
+        Aluno turini =  new Aluno("Rodrigo turini",34672 );
+
+        System.out.println(curso.estaMatriculado(turini));
+
+        System.out.println(a1.equals(turini));
+
+
+
 
     }
+
+
+
 }
