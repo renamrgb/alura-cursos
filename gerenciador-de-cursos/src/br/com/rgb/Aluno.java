@@ -13,7 +13,7 @@ public class Aluno {
         return nome;
     }
 
-    public int numeroMatricula() {
+    public int getnumeroMatricula() {
         return numeroMatricula;
     }
     @Override

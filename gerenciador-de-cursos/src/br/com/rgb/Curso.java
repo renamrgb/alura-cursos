@@ -8,6 +8,7 @@ public class Curso  {
     private String instrutor;
     private List<Aula> aulas = new LinkedList<>();
     private Set<Aluno> alunos = new HashSet<>();
+    private Map<Integer, Aluno> matriculaParaAluno = new LinkedHashMap<>();
 
 
     public Curso(String nome, String instrutor) {
@@ -43,6 +44,7 @@ public class Curso  {
 
     public void matricular(Aluno aluno) {
         this.alunos.add(aluno);
+        this.matriculaParaAluno.put(aluno.getnumeroMatricula(), aluno);
     }
 
     public Set<Aluno> getAlunos() {
@@ -54,4 +56,7 @@ public class Curso  {
     }
 
 
+    public Aluno buscaMatriculado(int numero) {
+        return matriculaParaAluno.get(numero);
+    }
 }
