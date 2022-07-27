@@ -2,7 +2,7 @@ package br.com.rgb;
 
 import java.util.*;
 
-public class Curso {
+public class Curso  {
 
     private String nome;
     private String instrutor;
