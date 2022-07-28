@@ -1,24 +1,23 @@
 package br.com.alura.tdd.service;
 
 import br.com.alura.tdd.modelo.Funcionario;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BonusServiceTest {
     @Test
     void bonusDeveriaSerZeroParaFuncionarioComSalarioAlto() {
         BonusService bonusService = new BonusService();
-        BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Teste",
-                        LocalDate.now(),
-                        new BigDecimal("25000")));
-        assertEquals(new BigDecimal("0.00"), bonus);
 
-
+        assertThrows(IllegalArgumentException.class,
+                () -> bonusService.calcularBonus(new Funcionario("Teste",
+                                LocalDate.now(),
+                                new BigDecimal("10001"))));
     }
 
     @Test
